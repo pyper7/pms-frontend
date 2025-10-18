@@ -1,0 +1,398 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
+All colors MUST be HSL.
+*/
+
+@layer base {
+  :root {
+    --background: 0 0% 98%;
+    --foreground: 220 13% 18%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 220 13% 18%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 220 13% 18%;
+
+    --primary: 120 100% 20%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 210 40% 96%;
+    --secondary-foreground: 220 13% 18%;
+
+    --muted: 220 13% 95%;
+    --muted-foreground: 220 13% 46%;
+
+    --accent: 120 100% 20%;
+    --accent-foreground: 0 0% 100%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --warning: 43 96% 56%;
+    --warning-foreground: 0 0% 100%;
+
+    --success: 120 100% 20%;
+    --success-foreground: 0 0% 100%;
+
+    --info: 217 91% 60%;
+    --info-foreground: 0 0% 100%;
+
+    --border: 220 13% 91%;
+    --input: 0 0% 100%;
+    --ring: 120 100% 20%;
+
+    --radius: 0.5rem;
+
+    --sidebar-background: 0 0% 100%;
+    --sidebar-foreground: 220 13% 18%;
+    --sidebar-primary: 120 100% 20%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 220 13% 95%;
+    --sidebar-accent-foreground: 220 13% 18%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 120 100% 20%;
+
+    --metric-card: 0 0% 100%;
+    --metric-text: 220 13% 46%;
+    --metric-number: 220 13% 18%;
+
+    --progress-bg: 220 13% 95%;
+    --progress-university: 142 71% 45%;
+    --progress-infrastructure: 217 91% 60%;
+    --progress-research: 43 96% 56%;
+    --progress-human: 142 71% 45%;
+
+    --emergency-critical: 0 84% 60%;
+    --emergency-warning: 43 96% 56%;
+    --emergency-info: 217 91% 60%;
+  }
+
+  .dark {
+    --foreground: 0 0% 98%;
+
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 142 76% 36%;
+    --primary-foreground: 355 7% 97%;
+
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
+
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --warning: 43 96% 56%;
+    --warning-foreground: 0 0% 98%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 0 0% 98%;
+
+    --info: 217 91% 60%;
+    --info-foreground: 0 0% 98%;
+
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 142 76% 36%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 142 76% 36%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 142 76% 36%;
+
+    --metric-card: 240 3.7% 15.9%;
+    --metric-text: 240 5% 64.9%;
+    --metric-number: 0 0% 98%;
+
+    --progress-bg: 240 3.7% 15.9%;
+    --progress-university: 142 76% 36%;
+    --progress-infrastructure: 217 91% 60%;
+    --progress-research: 43 96% 56%;
+    --progress-human: 142 76% 36%;
+
+    --emergency-critical: 0 62.8% 30.6%;
+    --emergency-warning: 43 96% 56%;
+    --emergency-info: 217 91% 60%;
+
+    /* Enhanced dark mode opacity tokens */
+    --white-5: 255 255 255 / 0.05;
+    --white-10: 255 255 255 / 0.1;
+    --white-15: 255 255 255 / 0.15;
+    --white-20: 255 255 255 / 0.2;
+    --white-25: 255 255 255 / 0.25;
+    --white-30: 255 255 255 / 0.3;
+    --white-40: 255 255 255 / 0.4;
+    --white-50: 255 255 255 / 0.5;
+    --white-60: 255 255 255 / 0.6;
+    --white-70: 255 255 255 / 0.7;
+    --white-80: 255 255 255 / 0.8;
+    --white-90: 255 255 255 / 0.9;
+    --white-95: 255 255 255 / 0.95;
+
+    /* Dark mode specific gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(142 76% 36%), hsl(142 76% 30%));
+    --gradient-secondary: linear-gradient(135deg, hsl(240 3.7% 15.9%), hsl(240 3.7% 12%));
+    --gradient-card: linear-gradient(135deg, hsl(240 10% 3.9%), hsl(240 5.9% 10%));
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+  }
+
+  /* Typography Hierarchy */
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.025em;
+  }
+
+  h1 {
+    @apply text-4xl font-bold tracking-tight;
+  }
+
+  h2 {
+    @apply text-3xl font-semibold tracking-tight;
+  }
+
+  h3 {
+    @apply text-2xl font-semibold tracking-tight;
+  }
+
+  h4 {
+    @apply text-xl font-semibold tracking-tight;
+  }
+
+  h5 {
+    @apply text-lg font-semibold tracking-tight;
+  }
+
+  h6 {
+    @apply text-base font-semibold tracking-tight;
+  }
+
+  /* Body Text Styles */
+  .text-display {
+    @apply text-5xl font-bold tracking-tight;
+  }
+
+  .text-lead {
+    @apply text-xl font-normal leading-relaxed;
+  }
+
+  .text-body-large {
+    @apply text-lg font-normal leading-relaxed;
+  }
+
+  .text-body {
+    @apply text-base font-normal leading-relaxed;
+  }
+
+  .text-body-small {
+    @apply text-sm font-normal leading-relaxed;
+  }
+
+  .text-caption {
+    @apply text-xs font-normal leading-relaxed;
+  }
+}
+
+/* Lightweight motion utilities for hero visuals */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes float-slow {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+  100% { transform: translateY(0); }
+}
+
+@keyframes fade-up {
+  0% { opacity: 0; transform: translateY(8px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slide-down {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@layer utilities {
+  .animate-float { animation: float 6s ease-in-out infinite; }
+  .animate-float-slow { animation: float-slow 8s ease-in-out infinite; }
+  .animate-fade-up { animation: fade-up 0.6s ease-out; }
+  .animate-slide-down { animation: slide-down 0.6s ease-out; }
+
+  /* Component Design Patterns */
+  .card-base {
+    @apply bg-white dark:bg-gray-800/50 backdrop-blur-sm border border-gray-200 dark:border-gray-700 rounded-lg shadow-sm;
+  }
+
+  .card-hover {
+    @apply hover:shadow-lg transition-all duration-300;
+  }
+
+  .card-interactive {
+    @apply hover:scale-105 cursor-pointer transition-transform duration-300;
+  }
+
+  .page-container {
+    @apply p-6 space-y-8;
+  }
+
+  .page-header {
+    @apply bg-white dark:bg-gray-800/50 backdrop-blur-sm rounded-lg border border-gray-200 dark:border-gray-700 p-6 shadow-sm;
+  }
+
+  .section-container {
+    @apply space-y-6;
+  }
+
+  .grid-responsive {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6;
+  }
+
+  .grid-cards {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6;
+  }
+
+  .grid-stats {
+    @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6;
+  }
+
+  /* Transition Utilities */
+  .transition-base {
+    @apply transition-all duration-300 ease-in-out;
+  }
+
+  .transition-fast {
+    @apply transition-all duration-200 ease-in-out;
+  }
+
+  .transition-slow {
+    @apply transition-all duration-500 ease-in-out;
+  }
+
+  /* Hover Effects */
+  .hover-scale {
+    @apply hover:scale-105 transition-transform duration-300;
+  }
+
+  .hover-lift {
+    @apply hover:-translate-y-1 transition-transform duration-300;
+  }
+
+  .hover-glow {
+    @apply hover:shadow-lg hover:shadow-primary/25 transition-shadow duration-300;
+  }
+
+  /* Focus States */
+  .focus-visible {
+    @apply focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2;
+  }
+
+  /* Input text visibility */
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="tel"],
+  input[type="url"],
+  input[type="search"],
+  input[type="number"],
+  input[type="date"],
+  input[type="datetime-local"],
+  input[type="time"],
+  input[type="month"],
+  input[type="week"],
+  textarea {
+    @apply text-foreground !important;
+    color: hsl(var(--foreground)) !important;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    @apply text-muted-foreground !important;
+    color: hsl(var(--muted-foreground)) !important;
+  }
+
+  /* Force input text visibility with higher specificity */
+  .card-base input,
+  .page-container input,
+  input[class*="text-foreground"],
+  input[class*="focus-visible"] {
+    color: hsl(var(--foreground)) !important;
+  }
+
+  .card-base textarea,
+  .page-container textarea,
+  textarea[class*="text-foreground"] {
+    color: hsl(var(--foreground)) !important;
+  }
+
+  /* Debug: Force all inputs to have visible text */
+  input, textarea {
+    color: #000000 !important; /* Black in light mode */
+  }
+
+  .dark input, .dark textarea {
+    color: #ffffff !important; /* White in dark mode */
+  }
+
+  /* Badge Variants */
+  .badge-success {
+    @apply bg-green-100 text-green-800 dark:bg-green-900/20 dark:text-green-400;
+  }
+
+  .badge-warning {
+    @apply bg-yellow-100 text-yellow-800 dark:bg-yellow-900/20 dark:text-yellow-400;
+  }
+
+  .badge-error {
+    @apply bg-red-100 text-red-800 dark:bg-red-900/20 dark:text-red-400;
+  }
+
+  .badge-info {
+    @apply bg-blue-100 text-blue-800 dark:bg-blue-900/20 dark:text-blue-400;
+  }
+
+  /* Dark Mode Gradients */
+  .gradient-primary {
+    background: linear-gradient(135deg, hsl(142 76% 36%), hsl(142 76% 30%));
+  }
+
+  .gradient-secondary {
+    background: linear-gradient(135deg, hsl(240 3.7% 15.9%), hsl(240 3.7% 12%));
+  }
+
+  .gradient-card {
+    background: linear-gradient(135deg, hsl(240 10% 3.9%), hsl(240 5.9% 10%));
+  }
+}
