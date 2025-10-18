@@ -54,28 +54,28 @@ const Landing = () => {
   const steps = [
     {
       step: "1",
-      title: "Staff Receives Login",
-      description: "New staff members receive secure login credentials"
+      title: "User Authentication",
+      description: "Secure login system with role-based access for HR Admin, Directors, Assistant Directors, and Officers"
     },
     {
       step: "2", 
-      title: "Sets Goals",
-      description: "Staff sets performance goals and objectives for the period"
+      title: "Performance Contracting",
+      description: "Create and manage performance contracts with KRAs and KPIs aligned to TETFund strategic objectives"
     },
     {
       step: "3",
-      title: "Supervisor Reviews",
-      description: "Direct supervisor reviews and provides feedback"
+      title: "Appraisal Management",
+      description: "Conduct comprehensive performance appraisals with multi-level review workflows and approval processes"
     },
     {
       step: "4",
-      title: "Director Approves",
-      description: "Department director provides final approval"
+      title: "Analytics & Reporting",
+      description: "Generate real-time performance reports, analytics dashboards, and evidence-based insights"
     },
     {
       step: "5",
-      title: "Reports Generated",
-      description: "System generates comprehensive performance reports"
+      title: "Organizational Excellence",
+      description: "Manage organizational hierarchy, post assignments, and track performance across all TETFund departments"
     }
   ];
 
@@ -615,7 +615,7 @@ const Landing = () => {
                 <img src="/pms/tetfund-logo.jpg" alt="TETFund" className="h-10 w-auto object-contain bg-white dark:bg-slate-800 rounded-sm p-1" onError={(e)=>{(e.currentTarget as HTMLImageElement).src='/favicon.ico'}} />
                 <div>
                   <span className="text-xl font-bold">TETFund PMS</span>
-                  <p className="text-sm text-white/80 dark:text-slate-300">Next-Gen Performance Management</p>
+                  <p className="text-sm text-white/80 dark:text-slate-300">Driving Excellence through Performance</p>
                 </div>
               </div>
               <p className="text-white/85 dark:text-slate-300 leading-relaxed max-w-md mb-6">
@@ -659,10 +659,6 @@ const Landing = () => {
           <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-white/85 dark:text-slate-300">
             <div className="flex items-center gap-6">
               <p>© {new Date().getFullYear()} TETFund PMS. All rights reserved.</p>
-              <div className="hidden md:flex items-center gap-2">
-                <div className="w-1 h-1 bg-white/70 dark:bg-slate-400 rounded-full"></div>
-                <span>Built for TETFund Excellence</span>
-              </div>
             </div>
             <div className="flex items-center gap-2 text-xs">
               <span>Dark mode supported</span>
