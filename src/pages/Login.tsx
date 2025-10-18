@@ -80,12 +80,6 @@ const Login = () => {
                   className="h-16 w-auto object-contain mx-auto mb-6" 
                   onError={(e) => { (e.currentTarget as HTMLImageElement).src = "/favicon.ico"; }}
                 />
-                <h1 className="text-4xl font-bold text-slate-900 dark:text-white mb-2">
-                  TETFund PMS
-                </h1>
-                <p className="text-lg text-slate-600 dark:text-slate-300">
-                  Performance Management System
-                </p>
               </div>
               <h2 className="text-3xl font-semibold text-slate-800 dark:text-slate-200 mb-4">
                 Welcome Back
